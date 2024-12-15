@@ -1,0 +1,247 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+.navs{
+    height: 65px;
+    padding: 0 40px;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid white;
+}
+.dark-mode .navs {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.navs a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    font-size: 1.05em;
+    cursor: pointer;
+
+}
+
+.theme-btn {
+ 
+
+    border:  1px dotted black;
+    height: 30px;
+    width: 30px;
+
+    position: relative;
+    top: 20px;
+    right: 20px;
+    
+   
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: background-color 0.3s ease;
+ 
+
+    
+}
+
+.mode{
+    border: 1px dotted black;
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+@media  screen and (min-width:200px) and (max-width: 679px) {
+    .container{
+        height: 320px;
+        width: 320px;
+    }    
+}
+.container.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+
+#value {
+    width: 100%;
+    font-size: 10em;
+    position: absolute;
+    top: 50px;
+    color: var(--js-black);
+
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+}
+
+.container.dark-mode #value {
+    color: #f4f4f4;
+}
+.container.dark-mode{
+    animation: rotate 1s linear both ;
+}
+
+.divider {
+    border-top: 2px solid black;
+    position: absolute;
+    width: 100%;
+    top: 245px;
+}
+.divider.dark-mode{
+    color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+
+
+
+.reset{
+    top: 265px;
+    left: 44%;
+    width: 65px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 1.4em;
+    color: white;
+    background: red;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+
+    font-weight: bold;
+    position: absolute;
+}
+
+.inc{
+    top: 340px;
+    left: 20%;
+    width: 80px;
+    height: 59px;
+    border-radius: 10px;
+
+
+
+    border: 2px solid green;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.dec{
+    top: 340px;
+    right: 20%;
+    width: 80px;
+    height: 59px;
+    border-radius: 10px;
+
+    border: 2px solid green;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    box-sizing: border-box;
+}
+
+.btn btn inc:hover {
+    background-color: green;
+}
+.btn dec:hover {
+    background-color: green;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+.container.dark-mode:before{
+    background-color: #fff;
+}
+.input-range {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.input-range label {
+    margin-right: 10px;
+}
+
+
+
+.year{
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+@keyframes rotate{
+    to{
+        transform: rotate3d(1,0,0,360deg);
+    }
+}
